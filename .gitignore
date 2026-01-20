@@ -206,19 +206,14 @@ marimo/_static/
 marimo/_lsp/
 __marimo__/
 
-"data_raw/"        | Add-Content .gitignore
-"data_processed/"  | Add-Content .gitignore
-"*.db"             | Add-Content .gitignore
-"*.sqlite"         | Add-Content .gitignore
-"*.sqlite3"        | Add-Content .gitignore
-"*.parquet"        | Add-Content .gitignore
-".ipynb_checkpoints/" | Add-Content .gitignore
-data_raw/
+# --- Project-specific (PZAP) ---
+data_raw/*
+!data_raw/README.md
+
 data_processed/
 *.db
 *.sqlite
 *.sqlite3
 *.parquet
+
 .ipynb_checkpoints/
-data_raw/*
-!data_raw/README.md
