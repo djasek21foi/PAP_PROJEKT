@@ -13,9 +13,7 @@ app = FastAPI(
     ),
 )
 
-# ---------------------------
-# Root / help
-# ---------------------------
+
 @app.get(
     "/",
     tags=["info"],
@@ -47,9 +45,7 @@ def root():
     }
 
 
-# ---------------------------
-# Tables / raw access
-# ---------------------------
+
 @app.get(
     "/tables",
     tags=["tables"],
@@ -96,9 +92,7 @@ def any_table(
         raise HTTPException(status_code=404, detail=str(e))
 
 
-# ---------------------------
-# Convenience endpoints (no guessing)
-# ---------------------------
+
 @app.get(
     "/dt_yearly",
     tags=["datasets"],
@@ -150,9 +144,7 @@ def integrated_individual(
     }
 
 
-# ---------------------------
-# Analytics
-# ---------------------------
+
 @app.get(
     "/analytics/summary",
     tags=["analytics"],
