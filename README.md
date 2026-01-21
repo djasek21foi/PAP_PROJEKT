@@ -10,3 +10,4 @@ te se izlažu kroz REST API (Flask). Na kraju se provodi osnovna analiza i vizua
 - Kaggle: Social Media vs Productivity (CSV)
 - Kaggle: Time Spent on Social Media (CSV)
 - World Bank API (JSON) – indikator internet usage 
+
