@@ -11,7 +11,19 @@ app = FastAPI(
 
 @app.get("/")
 def root():
-    return {"status": "ok", "endpoints": ["/tables", "/dt_yearly", "/wb_internet_year", "/integrated_individual"]}
+    return {
+        "status": "ok",
+        "endpoints": [
+            "/tables",
+            "/dt_yearly",
+            "/wb_internet_year",
+            "/integrated_individual",
+            "/table/{table_name}",
+            "/analytics/summary",
+            "/analytics/dt_vs_internet",
+        ],
+        "docs": "/docs"
+    }
 
 @app.get("/tables")
 def tables():
@@ -49,6 +61,10 @@ def any_table(
         return {"table": table_name, "rows": rows, "limit": limit, "offset": offset}
     except ValueError as e:
         raise HTTPException(status_code=404, detail=str(e))
+
+@app.get("/analytics/dt_vs_internet")
+def dt_vs_internet():
+    return {"rows": queries.fetch_dt_vs_internet()}
 
 @app.get("/analytics/summary")
 def summary():
