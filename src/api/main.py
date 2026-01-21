@@ -4,12 +4,14 @@ from fastapi import FastAPI, HTTPException, Query, Path
 from src.db import queries
 
 app = FastAPI(
-    title="PAP_PROJEKT API",
+    title="Utjecaj online sadržaja na dnevne navike i produktivnost.",
     version="0.1.0",
     description=(
-        "REST API over SQLite database (pap.db).\n\n"
+        "Napravio : David Jasek\n\n"
+        "API za analizu utjecaja online sadržaja na dnevne navike i produktivnost.\n\n"
+        "Pregled podataka iz različitih izvora (DT, WorldBank) i integrirani skup podataka na razini pojedinca.\n\n"
         "Tip: prvo pozovi /tables da vidiš dostupne tablice, "
-        "zatim koristi /table/{table_name} ili specifične endpointove."
+        "zatim koristi /table/{table_name} "
     ),
 )
 
