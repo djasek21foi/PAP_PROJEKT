@@ -49,3 +49,7 @@ def any_table(
         return {"table": table_name, "rows": rows, "limit": limit, "offset": offset}
     except ValueError as e:
         raise HTTPException(status_code=404, detail=str(e))
+
+@app.get("/analytics/summary")
+def summary():
+    return queries.fetch_summary()
