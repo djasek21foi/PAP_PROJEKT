@@ -20,25 +20,22 @@ Heterogeni izvori (različit format i struktura):
 > Napomena: World Bank indikator nema vrijednosti za sve godine (posebno rane godine), pa su `null` vrijednosti.
 
 ## Struktura projekta
+## Struktura projekta
+
+```text
 PAP_PROJEKT/
   data_raw/            # originalni CSV + raw JSON dump
-  data_processed/      # očišćeni/integirani CSV + SQLite (pap.db)
+  data_processed/      # obrađeni/integrirani podaci + SQLite (pap.db)
   notebooks/           # 01..04 (dokumentacija + koraci)
   src/
-    api/               # FastAPI (main.py)
+    api/               # FastAPI app (main.py)
     db/                # connection.py, queries.py
     etl/               # (opcionalno) skripte za rebuild baze
   scripts/             # pomoćni testovi (test_db.py)
   README.md
   LICENSE
   .gitignore
-
-- `data_raw/` — sirovi (preuzeti) CSV i raw JSON iz API-a
-- `data_processed/` — rezultat obrade: integrirani CSV + `pap.db`
-- `notebooks/` — dokumentirani koraci projekta (od izvora do analize)
-- `src/` — kod za bazu i API
-- `scripts/` — brzi testovi (npr. ispis tablica u bazi)
-
+```
 ## Bilježnice (notebooks)
 
 1. **01_data_collection.ipynb**
