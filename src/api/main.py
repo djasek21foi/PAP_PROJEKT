@@ -25,7 +25,7 @@ def get_int_param(name: str, default: int, min_v: int | None = None, max_v: int 
 
 @app.errorhandler(ValueError)
 def handle_value_error(e):
-    # npr. krivi limit/offset ili nepoznata tablica
+   
     return jsonify({"detail": str(e)}), 400
 
 
