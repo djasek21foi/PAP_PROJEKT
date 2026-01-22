@@ -28,9 +28,9 @@ PAP_PROJEKT/
   data_processed/      # obrađeni/integrirani podaci + SQLite (pap.db)
   notebooks/           # 01..04 (dokumentacija + koraci)
   src/
-    api/               # FastAPI app (main.py)
+    api/               # Flask app (main.py)
     db/                # connection.py, queries.py
-    etl/               # (opcionalno) skripte za rebuild baze
+    etl/               # opcionalno
   scripts/             # pomoćni testovi (test_db.py)
   README.md
   LICENSE
@@ -59,8 +59,11 @@ PAP_PROJEKT/
   
 ## Pokretanje projekta
 Iz root foldera projekta:
-python -m uvicorn src.api.main:app --reload
+python -m src.api.main
 
 Otvorit će se:
-Swagger UI: http://127.0.0.1:8000/docs
-OpenAPI JSON: http://127.0.0.1:8000/openapi.json
+API root (upute + primjeri)
+Popis tablica
+Primjer dohvaćanja
+Analitika
+Join po godini
